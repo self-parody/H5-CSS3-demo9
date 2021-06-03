@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style: none;
+        }
+        body{
+            background-color: #000;
+        }
+        /* 加载动画1 */
+        .box{
+            width: 175px;
+            height: 20px;
+            margin: 100px auto;
+        }     
+        .box ul li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: skyblue;
+            margin-left: 15px;
+            position: relative;
+        }
+        .box ul li:nth-of-type(1){
+            background-color: rgb(176, 224, 243);
+        }
+        .box ul li:nth-of-type(2){
+            background-color: rgb(110, 204, 241);
+        }
+        .box ul li:nth-of-type(3){
+            background-color: rgb(121, 176, 228);
+        }
+        .box ul li:nth-of-type(4){
+            background-color: rgb(76, 159, 238);
+        }
+        .box ul li:nth-of-type(5){
+            background-color: rgb(70, 116, 216);
+        }
+        .box ul li::after{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: inherit;
+            animation: x 2s ease-out infinite;
+        }
+        .box ul li:nth-of-type(2)::after{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: inherit;
+            animation-delay: 0.2s;
+        }
+        .box ul li:nth-of-type(3)::after{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: inherit;
+            animation-delay: 0.4s;
+        }
+        .box ul li:nth-of-type(4)::after{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: inherit;
+            animation-delay: 0.6s;
+        }
+        .box ul li:nth-of-type(5)::after{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: inherit;
+            animation-delay: 0.8s;
+        }
+        .box ul li:nth-of-type(6)::after{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: inherit;
+            animation-delay: 1s;
+        }
+        @keyframes x{
+            /* from{}          
+            to{                
+                transform: scale(2.5);
+                opacity: 0;
+            } */
+            50%,70%{
+                transform: scale(2.5);
+            }
+            80%,100%{
+                opacity: 0;
+            }
+        }
+
+        /* 加载动画2 */
+        .box2{
+            width: 150px;
+            height: 150px;
+            margin: 200px auto;
+            position: relative;
+        }   
+        .box2 .contain2{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border-top: 8px solid rgb(194, 110, 124);  
+            position: relative; 
+            animation: rotate1 2s linear infinite;
+                   
+        }
+        .box2 .contain2::before,.box2 .contain2::after{
+            content: '';
+            position: absolute;
+            top: -10px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border-top: 8px solid rgb(66, 156, 192);  
+            transform: rotateZ(120deg);
+            
+        }
+      
+        .box2 .contain2::after{         
+            border-top: 8px solid rgb(224, 164, 95);  
+            transform: rotateZ(240deg);
+        }       
+        .box2 span{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            color: thistle;    
+            /* 文字逆向转 */
+            animation: rotate2 2s linear infinite;      
+        }
+        @keyframes rotate1{
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+        @keyframes rotate2{
+            to{
+                transform: rotateZ(-360deg);
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- 加载动画1 -->
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <!-- 加载动画2 -->
+    <div class="box2">
+        
+        <div class="contain2">
+            <span>loading...</span>
+        </div>
+    </div>
+</body>
+</html>
