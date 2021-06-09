@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>loading animation</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <style>
         *{
             margin: 0;
@@ -102,11 +104,7 @@
             animation-delay: 1s;
         }
         @keyframes x{
-            /* from{}          
-            to{                
-                transform: scale(2.5);
-                opacity: 0;
-            } */
+
             50%,70%{
                 transform: scale(2.5);
             }
@@ -171,7 +169,7 @@
         /* 加载动画3 */
         .box3{
             width: 88px;
-            /* height:36px ; */
+            height:36px ;
             margin: 100px auto;
         }
         .box3 .line{
@@ -216,7 +214,41 @@
             }
         }
 
+        /* 加载动画4 */
+        .box4{           
+            position: relative;
+            width: 200px;
+            margin: 100px auto;
         
+        }
+        .box4 .t1{
+            position: absolute;
+            font-family: 'Monoton', cursive;
+            font-size: 60px;           
+            left: 50%;
+            transform: translateX(-50%);
+            animation: light 4s linear infinite;
+        }
+        .box4 .t2{
+            position: absolute;
+            font-size: 20px;
+            top: 75px;      
+            left: 50%;
+            transform: translateX(-50%);
+           
+            animation: light 4s linear infinite;
+        }
+        @keyframes light
+        {
+            27%,31%,71%,73%{
+                color: #444;
+                text-shadow:-4px 0 5px #444,0 0 3px #444;
+            }
+            0%,25%,29%,33%,70%,74%,100%{
+                color: royalblue;
+                text-shadow:-4px 0 5px royalblue,0 0 3px royalblue;
+            }
+        }
     </style>
 </head>
 <body>
@@ -231,8 +263,7 @@
         </ul>
     </div>
     <!-- 加载动画2 -->
-    <div class="box2">
-        
+    <div class="box2">      
         <div class="contain2">
             <span>loading...</span>
         </div>
@@ -247,6 +278,11 @@
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
+    </div>
+    <!-- 加载动画4 -->
+    <div class="box4">
+        <div class="t1">css</div>
+        <div class="t2">loading...</div>
     </div>
 </body>
 </html>
