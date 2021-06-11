@@ -218,7 +218,9 @@
         .box4{           
             position: relative;
             width: 200px;
+            height: 100px;
             margin: 100px auto;
+            
         
         }
         .box4 .t1{
@@ -247,6 +249,35 @@
             0%,25%,29%,33%,70%,74%,100%{
                 color: royalblue;
                 text-shadow:-4px 0 5px royalblue,0 0 3px royalblue;
+            }
+        }
+        /* 加载动画5 */
+        .box5{
+            position: relative;
+            width: 300px;
+            margin: 100px auto;
+            font-size: 4rem;
+            font-weight: 700;
+        }
+        .box5 span{
+            color: white;
+            position: absolute;
+            width: 300px;
+        }
+        .box5 .w1{
+            -webkit-text-stroke: 2px royalblue;
+            color: transparent;
+        }
+        .box5 .w2{
+            color: royalblue;
+            animation: wave 3s ease-in-out infinite;
+        }
+        @keyframes wave{
+            0%,100%{
+                clip-path: polygon(0 54%, 11% 53%, 24% 55%, 46% 64%, 65% 70%, 83% 68%, 100% 62%, 100% 99%, 0% 99%);
+            }
+            50%{
+                clip-path: polygon(0 59%, 14% 61%, 34% 67%, 49% 66%, 64% 61%, 86% 49%, 100% 44%, 100% 99%, 0% 99%);
             }
         }
     </style>
@@ -283,6 +314,11 @@
     <div class="box4">
         <div class="t1">css</div>
         <div class="t2">loading...</div>
+    </div>
+    <!-- 加载动画5 -->
+    <div class="box5">
+        <span class="w1">loading...</span>
+        <span class="w2">loading...</span>
     </div>
 </body>
 </html>
