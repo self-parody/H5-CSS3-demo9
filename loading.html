@@ -255,7 +255,8 @@
         .box5{
             position: relative;
             width: 300px;
-            margin: 100px auto;
+            height: 100px;
+            margin: 50px auto;
             font-size: 4rem;
             font-weight: 700;
         }
@@ -278,6 +279,61 @@
             }
             50%{
                 clip-path: polygon(0 59%, 14% 61%, 34% 67%, 49% 66%, 64% 61%, 86% 49%, 100% 44%, 100% 99%, 0% 99%);
+            }
+        }
+
+        /* 加载动画6 */
+        .box6{
+            width: 100px;
+            height: 100px;
+            margin: 50px auto;
+            border-radius: 50%;
+            background-image: linear-gradient(45deg,transparent,transparent 40%,rgb(109, 41, 236) 100%);
+            position: relative;
+            animation: rotate1 2s linear infinite;
+        }
+        .box6::before{
+            content: "loading";
+            text-align: center;
+            line-height: 90px;       
+            color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            bottom: 5px;
+            right: 5px;
+            background-color: #000;
+            animation: rotate2 2s linear infinite;        
+        }
+        .box6::after{
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            border-radius: 50%;
+            background-image: linear-gradient(45deg,transparent,transparent 40%,rgb(109, 41, 236) 100%);         
+            z-index: -1;
+            filter: blur(20px);
+        }
+        @keyframes rotate1{
+            from{
+                transform: rotateZ(0deg);
+                filter:hue-rotate(0deg)
+            }
+            to{
+                transform: rotateZ(360deg);
+                filter:hue-rotate(360deg)
+            }
+        }
+        @keyframes rotate2{
+            from{
+                transform: rotateZ(360deg);
+            }
+            to{
+                transform: rotateZ(0deg);
             }
         }
     </style>
@@ -320,5 +376,7 @@
         <span class="w1">loading...</span>
         <span class="w2">loading...</span>
     </div>
+    <!-- 加载动画6 -->
+    <div class="box6"></div>
 </body>
 </html>
