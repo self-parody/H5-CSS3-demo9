@@ -19,6 +19,9 @@
         body{
             background-color: #000;
         }
+        .line-one,.line-two{
+            display: flex;
+        }
         /* 加载动画1 */
         .box{
             width: 175px;
@@ -339,44 +342,48 @@
     </style>
 </head>
 <body>
-    <!-- 加载动画1 -->
-    <div class="box">
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
-    <!-- 加载动画2 -->
-    <div class="box2">      
-        <div class="contain2">
-            <span>loading...</span>
+    <div class="line-one">
+        <!-- 加载动画1 -->
+        <div class="box">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <!-- 加载动画2 -->
+        <div class="box2">      
+            <div class="contain2">
+                <span>loading...</span>
+            </div>
+        </div>
+        <!-- 加载动画3 -->
+        <div class="box3">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
         </div>
     </div>
-    <!-- 加载动画3 -->
-    <div class="box3">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
+    <div class="line-two">
+        <!-- 加载动画4 -->
+        <div class="box4">
+            <div class="t1">css</div>
+            <div class="t2">loading...</div>
+        </div>
+        <!-- 加载动画5 -->
+        <div class="box5">
+            <span class="w1">loading...</span>
+            <span class="w2">loading...</span>
+        </div>
+        <!-- 加载动画6 -->
+        <div class="box6"></div>
     </div>
-    <!-- 加载动画4 -->
-    <div class="box4">
-        <div class="t1">css</div>
-        <div class="t2">loading...</div>
-    </div>
-    <!-- 加载动画5 -->
-    <div class="box5">
-        <span class="w1">loading...</span>
-        <span class="w2">loading...</span>
-    </div>
-    <!-- 加载动画6 -->
-    <div class="box6"></div>
 </body>
 </html>
