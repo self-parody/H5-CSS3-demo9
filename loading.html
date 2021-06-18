@@ -363,6 +363,53 @@
                 background-position: 350px 0;
             }
         }
+        
+                /* 加载动画8 */
+        .box8{
+            font-size: 50px;
+            letter-spacing: 5px;
+            font-weight: 700;
+            color: #fff;
+            margin: 100px auto;
+            position: relative;
+        }
+        .box8::before,.box8::after{
+            content: 'LOADING';
+            position: absolute;
+            z-index: -1;
+        }
+        .box8::before{
+            color: rgb(97, 247, 247);
+            animation: shake 0.5s linear infinite 0.2s;
+        }
+        .box8::after{
+            color: rgb(248, 73, 102);
+            left: -6px;
+            top: -6px;
+            animation: shake 0.5s linear infinite;
+        }
+        @keyframes shake{
+            0%{
+                left: -5px;
+                top: -5px;
+            }
+            25%{
+                left: -3px;
+                top: -3px;
+            }
+            50%{
+                left: 3px;
+                top: 0px;
+            }
+            75%{
+                left: 3px;
+                top: 0px;
+            }
+            100%{
+                left: -3px;
+                top: 5px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -412,6 +459,8 @@
     <div class="line-three">
         <!-- 加载动画7 -->
         <div class="box7">LOADING...</div>
+        <!-- 加载动画8 -->
+        <div class="box8">LOADING</div>
     </div>
 </body>
 </html>
