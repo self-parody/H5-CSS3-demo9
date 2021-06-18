@@ -339,6 +339,30 @@
                 transform: rotateZ(0deg);
             }
         }
+        
+        /* 加载动画7 */
+        .box7{
+            width: 350px;
+            height: 350px;
+            background: url("wave.png") repeat-x;
+            text-align: center;
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 320px;
+            background-clip: text;
+            -webkit-background-clip: text;     
+            color: rgba(134, 192, 247, 0.1);
+            animation: wave2 15s linear infinite; 
+            margin:0 auto;
+        }
+        @keyframes wave2{
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: 350px 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -384,6 +408,10 @@
         </div>
         <!-- 加载动画6 -->
         <div class="box6"></div>
+    </div>
+    <div class="line-three">
+        <!-- 加载动画7 -->
+        <div class="box7">LOADING...</div>
     </div>
 </body>
 </html>
