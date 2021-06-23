@@ -408,6 +408,62 @@
                 top: 5px;
             }
         }
+         /* 加载动画9  */
+        .box9{
+            margin: 100px auto;
+            position: relative;
+            width: 30%;
+        }
+        .box9 span{
+            position: absolute;
+            top: 20px;
+            font-size: 20px;
+            color: #ffeea7;
+            opacity: 0;
+            animation: fade 2.5s linear infinite;
+        }
+        .box9 span:nth-child(2){
+            animation-delay: 0.2s;
+        }
+        .box9 span:nth-child(3){
+            animation-delay: 0.4s;
+        }
+        .box9 span:nth-child(4){
+            animation-delay: 0.6s;
+        }
+        .box9 span:nth-child(5){
+            animation-delay: 0.8s;
+        }
+        .box9 span:nth-child(6){
+            animation-delay: 1s;
+        }
+        .box9 span:nth-child(7){
+            animation-delay: 1.2s;
+        }
+        @keyframes fade{
+            0%{
+                left: 0;
+                transform: rotateZ(180deg);
+                
+            }
+            35%{
+               
+                transform:rotateZ(0deg); 
+                left:40% ;  
+                opacity: 1;         
+            }
+            65%{
+                left: 60%;
+                transform:rotateZ(0deg);
+                opacity: 1;
+            }
+            100%{
+                left: 100%;
+                transform:rotateZ(-180deg);
+                opacity: 0;
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -459,6 +515,16 @@
         <div class="box7">LOADING...</div>
         <!-- 加载动画8 -->
         <div class="box8">LOADING</div>
+        <!-- 加载动画9 -->
+        <div class="box9">           
+            <span>G</span>
+            <span>N</span>
+            <span>I</span>
+            <span>D</span>
+            <span>A</span>
+            <span>O</span>
+            <span>L</span>
+        </div>
     </div>
 </body>
 </html>
